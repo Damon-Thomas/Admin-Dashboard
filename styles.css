@@ -1,0 +1,107 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    
+}
+
+:root {
+    --main-colour: aqua;
+    --white-colour: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20vw 1fr 22vw;
+    grid-template-rows: 7vh 10vh 5vh 1fr;
+}
+
+.header {
+    grid-column: 2/4;
+    background-color: var(--white-colour);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 2.5vh 0 0 2vw;
+    font-size: 2.5vh;
+      
+}
+
+.dashboard {
+    background-color: var(--main-colour);
+    height: 100%;
+    width: auto;
+    
+}
+
+.side-bar {
+    grid-row: 1/5;
+    background-color: var(--main-colour);
+    display: grid;
+    grid-template-rows: repeat(11, 4.9vh);
+    font-size: 2.5vh;
+    padding: 2.5vh 0 0 2vw;
+}
+
+.nav {
+    grid-column: 2/4;
+    background-color: var(--white-colour);
+    display: grid;
+    grid-template-columns: 10vw 1fr 30vw;
+    align-items: center;
+    
+    
+}
+
+.nav p {
+    font-size: 1.5vh;
+}
+
+.nav h2 {
+    font-size: 2.5vh;
+    font-weight: 600;
+}
+.nav-buttons {
+    display: flex;
+    gap: 2vw;
+    
+    
+}
+
+.nav-buttons > button {
+    height: 4vh;
+    width: 7.5vw;
+    border-radius: 7vh;
+    background-color: var(--main-colour);
+    font-size: 2vh;
+    border: none;
+   
+}
+
+
+.labels {
+    grid-column: 2/4;
+    background-color: rgb(172, 56, 152);
+}
+
+.cards{
+    background-color: rgb(184, 77, 77);
+}
+
+.right-side {
+    background-color: grey;
+}
