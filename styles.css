@@ -284,4 +284,37 @@ time, mark, audio, video {
     background-color: var(--white-colour);
     border-radius: 1vw;
     box-shadow: 2px 2px 4px  var(--shadow-color);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 1vh;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 1.5vw;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1vh;
+    align-items: center;
+}
+
+.user > h5 {
+    font-size: 1vw;
+    font-weight: 500;
+    align-self: flex-end;
+    margin: 0;
+}
+
+.user > p {
+    font-size: .75vw;
+    font-style: italic;
+    align-self: flex-start;
+    font-weight: 0;
+}
+.user > img {
+    grid-row: 1/3;
+    height: 5vh;
+    width: 5vh;
 }
