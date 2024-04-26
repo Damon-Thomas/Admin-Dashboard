@@ -23,7 +23,6 @@ time, mark, audio, video {
 }
 
 :root {
-    /* --main-colour: rgb(21, 164, 230); */
     --main-colour: #450a0a;
     --white-colour: white;
     --tertiary-colour: rgba(222, 230, 231, 0.781);
@@ -31,7 +30,7 @@ time, mark, audio, video {
     --shadow-color: #b49d9d;
     --p-colour: #615c5c;
     --p-rgb-colour: 97, 92, 92
-    /* rgba(236, 160, 17, 0.822) */
+    
 }
 
 .container {
@@ -86,9 +85,10 @@ time, mark, audio, video {
     align-items: center;
 }
 .header-nav > svg {
-    height: 3vh;
-    width: 3vh;
+    height: 2.5vw;
+    width: 2.5vw;
     color: #000;
+    z-index: 2;
 }
 
 #avatar-head {
@@ -117,20 +117,21 @@ time, mark, audio, video {
 }
 
 .side-bar-nav > svg {
-    height: 2.5vh;
-    width: 2.5vh;
+    height: 1.5vw;
+    width: 1.5vw;
     fill: var(--white-colour);
     justify-self: center;
 }
 
 #dashboard > svg {
-    height: 5vh;
-    width: 5vh;
+    height: 4vw;
+    width: 4vw;
 }
 
 #dashboard {
-    font-size: 3vh;
+    font-size: 2vw;
     font-weight: 900;
+    align-self: center;
     
 }
 
@@ -155,19 +156,21 @@ time, mark, audio, video {
 }
 
 .nav h2 {
-    font-size: 2.5vh;
+    font-size: 1.5vw;
     font-weight: 600;
 }
 .nav-buttons {
     display: flex;
-    gap: 2vw;
+    gap: 1vw;
+    justify-content: end;
+    padding-right: 2.5vw;
     
     
 }
 
 .nav-buttons > button {
     height: 4vh;
-    width: 7.5vw;
+    width: 7vw;
     border-radius: 7vh;
     background-color: var(--main-colour);
     font-size: 1.75vh;
@@ -198,18 +201,18 @@ time, mark, audio, video {
 .cards{
     grid-row: 2/5;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2vw;
+    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+    gap: 1vw;
     
 }
 
 .card p {
-    font-size: 1.5vh;
+    font-size: .75vw;
     color: var(--p-colour);
 }
 
 .card h3 {
-    font-size: 1.75vh;
+    font-size: 1vw;
     font-weight: 600;
     margin-bottom: .5vh;
 }
@@ -219,8 +222,32 @@ time, mark, audio, video {
     display: grid;
     grid-template-columns: .5vw 1fr;
     border-radius: 1vw;
-    overflow: hidden;
-    
+    overflow: hidden;  
+}
+
+.icons {
+    display: flex;
+    flex-direction: row-reverse;
+    fill: #000;
+    justify-self: flex-end;
+    align-items: flex-end;
+    gap: 1vw;
+    padding-right: 1vw;
+
+}
+
+.icons > img {
+    height: 2vw;
+    width: 2vw;
+}
+
+img, svg, button {
+    filter: drop-shadow(0px 0px 0px  var(--shadow-color));
+    transition: drop-shadow 0.3s ease-in-out;
+}
+
+img:hover, svg:hover, button:hover {
+    filter: drop-shadow(0px 0px 5px  var(--shadow-color)); 
 }
 
 .card, .announcement-content, .trending-content {
@@ -229,14 +256,14 @@ time, mark, audio, video {
 }
 
 .card:hover, .announcement-content:hover, .trending-content:hover {
-    box-shadow: 6px 6px 10px  var(--shadow-color);
+    box-shadow: 6px 6px 15px  var(--shadow-color);
     
 }
 
-
-
 .c-content {
-    padding: 1.5vw;
+    padding: 1vw;
+    display: grid;
+    grid-template-rows: 4vh 1fr 2vh 5vh
 }
 
 .accent {
@@ -271,8 +298,9 @@ time, mark, audio, video {
 }
 
 .announcement p {
-    font-size: 1vh;
+    font-size: .6vw;
     color: var(--p-colour);
+    overflow: hidden;
 }
 
 .announcement h4 {
@@ -283,13 +311,9 @@ time, mark, audio, video {
 .trending-content {
     background-color: var(--white-colour);
     border-radius: 1vw;
-    box-shadow: 2px 2px 4px  var(--shadow-color);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    row-gap: 1vh;
-    align-items: center;
-    /* justify-content: center; */
-    padding: 1.5vw;
+    padding: 1vh 1.5vw;
 }
 
 .user {
@@ -301,20 +325,20 @@ time, mark, audio, video {
 }
 
 .user > h5 {
-    font-size: 1vw;
-    font-weight: 500;
+    font-size: 1.5vh;
+    font-weight: 800;
     align-self: flex-end;
     margin: 0;
 }
 
 .user > p {
-    font-size: .75vw;
+    font-size: .6vw;
     font-style: italic;
     align-self: flex-start;
     font-weight: 0;
 }
 .user > img {
     grid-row: 1/3;
-    height: 5vh;
-    width: 5vh;
+    height: 6vh;
+    width: 6vh;
 }
